@@ -72,7 +72,7 @@ public class Main {
         //calculating prize
         int amountInALifetime = (numberOfDays * snackEatenPerDay);
 
-        System.out.println("Congratulations, you have won a lifetime supply of " + userInputSnack + "!" + " " + "You will receive " + snackEatenPerDay + " per day" + ", \n for a grand total of " + amountInALifetime + " " + userInputSnack + ".");
+        System.out.println("Congratulations, you have won a lifetime supply of " + userInputSnack + "!" + " " + "You will receive " + snackEatenPerDay + " " + userInputSnack +  " per day" + ", \n for a grand total of " + amountInALifetime + " " + userInputSnack + ".");
 
 
     }
@@ -218,7 +218,7 @@ public class Main {
             double result = ((tempValue - 32) * 5 / 9);
 
             //print result
-            System.out.println(tempValue + " converted to Celsius is " + result + "°C");
+            System.out.println(tempValue + "°F converted to Celsius is " + result + "°C");
 
         }
         //user did not enter c or C so convert to Fahrenheit
@@ -228,7 +228,7 @@ public class Main {
 
             //create variable called result and assign answer to it
             double result =((tempValue / 5) * 9 + 32);
-            System.out.println(tempValue + " converted to Fahrenheit is " + result + "°F");
+            System.out.println(tempValue + "°C converted to Fahrenheit is " + result + "°F");
         }
 
 
@@ -243,8 +243,8 @@ public class Main {
         //To run your code uncomment the code for each exercise as you write them and want to test them
         //and see the output.
 
-        //LifeTimeSupply();
+        LifeTimeSupply();
         //FutureAge();
-        TemperatureConversion();
+        //TemperatureConversion();
     }
 }
