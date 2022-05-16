@@ -1,11 +1,11 @@
 package com.kenzie.app;
 
+import java.util.Scanner;
 public class Main {
     //------------------------------------------------------------------------------------------------------------------
     //EXERCISE ONE
    //------------------------------------------------------------------------------------------------------------------
-
-    public static void LifeTimeSupply(){
+    public static void LifeTimeSupply() {
         // Exercise One - Computing a lifetime supply of your favorite snack!
         //
         // You just won a lifetime supply of your favorite snack.
@@ -45,6 +45,34 @@ public class Main {
         System.out.println("Congratulations!  You have won a lifetime supply of your favorite snack!");
 
         // Write your code here
+        //Defining variable and set to Scanner object
+        Scanner sc = new Scanner(System.in);
+
+        //Ask for favorite snack
+        System.out.println("What is your favorite snack?");
+
+        //Define a variable to hold the input
+        String userInputSnack = sc.nextLine();
+
+        //Asking for number eaten in a day
+        System.out.println("How many do you eat in a day?");
+
+        //Define a variable to hold the input
+        int snackEatenPerDay = sc.nextInt();
+
+        //Asking for age
+        System.out.println("What is your age?");
+
+        //Define a variable to hold the input
+        int winnersAge = sc.nextInt();
+
+        // Calculate how many they would need to last them until they are 100!
+        int numberOfDays = (365 * (100 - winnersAge));
+
+        //calculating prize
+        int amountInALifetime = (numberOfDays * snackEatenPerDay);
+
+        System.out.println("Congratulations, you have won a lifetime supply of " + userInputSnack + "!" + " " + "You will receive " + snackEatenPerDay + " " + userInputSnack +  " per day" + ", \n for a grand total of " + amountInALifetime + " " + userInputSnack + ".");
 
 
     }
@@ -80,6 +108,31 @@ public class Main {
         System.out.println("Welcome to the Future Age Calculator!");
 
         // Write your code here
+        //Define variable and set to a Scanner object
+        Scanner scan = new Scanner(System.in);
+
+        //Ask for input
+        System.out.println("What year were you born in?");
+
+        //Define variable to hold the input
+        int yearBorn = scan.nextInt();
+
+        //Ask for future year
+        System.out.println("Name a year in the future:");
+
+        //Define variable to hold input
+        int yearInFuture = scan.nextInt();
+
+        // Calculate the two possible ages for that year based on their inputs.
+        int possibleAge1 = (yearInFuture - yearBorn);
+        int possibleAge2 = (possibleAge1 - 1);
+
+        //create variable called message which describes the result
+        String message = ("You will be either " + possibleAge2 + " or " + possibleAge1 + " in " + yearInFuture + ".");
+
+        System.out.println(message);
+
+
     }
 
     //------------------------------------------------------------------------------------------------------------------
@@ -143,6 +196,46 @@ public class Main {
         System.out.println("Welcome to the Temperature Converter!");
 
         // Write your code here
+        //Define a variable and set it to a Scanner object
+        Scanner scanner = new Scanner(System.in);
+
+        //ask the user what unit they would like to convert to.  f or c
+        System.out.println("What would you like to convert to, Celsius or Fahrenheit? Enter c or f...");
+
+        //Define a variable to hold the input
+        String userPreferenceFOrC = scanner.next();
+
+        //user input can be capital or lowercase
+        if (userPreferenceFOrC.equals("c") || userPreferenceFOrC.equals("C")) {
+
+            //Ask user for a temperature they would like to convert
+            System.out.println("What temperature value would you like to convert?");
+
+            //Define a variable to hold the input which may be a decimal value
+            double tempValue = scanner.nextDouble();
+
+            //create variable called result and assign answer to it
+            double result = ((tempValue - 32) * 5 / 9);
+
+            //print result
+            System.out.println(tempValue + "°F converted to Celsius is " + result + "°C");
+
+        }
+        //user did not enter c or C so convert to Fahrenheit
+        else {
+            System.out.println("What temperature value would you like to convert?");
+            double tempValue = scanner.nextDouble();
+
+            //create variable called result and assign answer to it
+            double result =((tempValue / 5) * 9 + 32);
+            System.out.println(tempValue + "°C converted to Fahrenheit is " + result + "°F");
+        }
+
+
+        //store input in variable may be decimal using Double
+        //double tempToConvert = scanner.nextDouble();
+
+
 
     }
 
